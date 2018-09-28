@@ -147,9 +147,9 @@ traverse(tmp_path)
 
 ### 5.主调用函数
 >可以在这里做相关配置
->`codeCount` 每个文件中添加的代码数量
-`file_prefix` 主工程目录
-`file_dirs`
+>`codeCount` ：每个文件中添加的代码数量  
+`file_prefix` ：主工程目录  
+`file_dirs`： 要添加垃圾代码文件所在的文件夹路径
 
 ```python
 def addRubbish():
