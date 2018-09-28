@@ -35,7 +35,6 @@ def HFileAddCode(file_path,old_str,endTotalCount):
             file_data += line
         else:
             file_data += line
-    file_data += '\n'
     Ropen.close()
     Wopen=open(file_path,'w')
     Wopen.write(file_data)
