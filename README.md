@@ -175,4 +175,4 @@ traverse(file_dir)
 
 #### 3.工程只是加了垃圾代码，还不能通过审核，还需要批量修改类名，给类名添加前缀和后缀，请参考 [https://my.oschina.net/FEEDFACF/blog/1627398](https://my.oschina.net/FEEDFACF/blog/1627398)
 >我自己通过加垃圾代码和修改类名这两个方法之后，用同一份代码已经上架了6个app
-#### 参考文章：[https://blog.csdn.net/u013857988/article/details/79656048](https://blog.csdn.net/u013857988/article/details/79656048)
+
