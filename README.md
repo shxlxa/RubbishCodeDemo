@@ -169,9 +169,7 @@ traverse(file_dir)
 #### 1.注意点
 >对于那些model文件，需要添加垃圾代码的，需要在model中先导入`UIKit`框架
 
-#### 2. `github`下载链接，欢迎提意见，有帮助的可以`star`一下
-[https://github.com/shxlxa/RubbishCodeDemo](https://github.com/shxlxa/RubbishCodeDemo)
-- 使用方法：进入到python脚本文件夹, `python3 addRubbishCode.py`运行脚本
+#### 2. 使用方法：进入到python脚本文件夹, `python3 addRubbishCode.py`运行脚本
 
 #### 3.工程只是加了垃圾代码，还不能通过审核，还需要批量修改类名，给类名添加前缀和后缀，请参考 [https://my.oschina.net/FEEDFACF/blog/1627398](https://my.oschina.net/FEEDFACF/blog/1627398)
 >我自己通过加垃圾代码和修改类名这两个方法之后，用同一份代码已经上架了6个app
