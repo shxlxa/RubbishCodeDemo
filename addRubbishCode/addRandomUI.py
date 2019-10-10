@@ -14,23 +14,35 @@ def getRandomStr(satrtIndex,endIndex):
         final += (random.choice(numbers))
     return final
 
-# name = getRandomStr(50,100)
+
+def getRandomWord():
+    file_path = 'word.txt'
+    try:
+        f = open(file_path, 'r+')
+        lines = f.readlines()
+        return random.choice(lines).strip()
+    except Exception as e:
+        print(e)
+
+# name = getRandomWord()(50,100)
+# word = getRandomWord()
+# print(word)
 
 
 # 生成NSString类
 def addNSString():
-    line = '- (NSString *)' + getRandomStr(15,20) + ':(NSString *)' + getRandomStr(15,20) + ' {\n   '
-    stringName = getRandomStr(15,20)
-    string = 'NSString *' + stringName + ' = @"' + getRandomStr(50,100) + '";\n   return '+ stringName + ';\n}'
+    line = '- (NSString *)' + getRandomWord() + ':(NSString *)' + getRandomWord() + ' {\n   '
+    stringName = getRandomWord()
+    string = 'NSString *' + stringName + ' = @"' + getRandomWord() + '";\n   return '+ stringName + ';\n}'
     return line+string + '\n\n'
 
 # 生成NSArray类
 def addNSArray():
-    line = '- (NSArray *)' + getRandomStr(15,20) + ':(NSArray *)' + getRandomStr(15,20) + ' {\n   '
-    arrayName = getRandomStr(15,20)
+    line = '- (NSArray *)' + getRandomWord() + ':(NSArray *)' + getRandomWord() + ' {\n   '
+    arrayName = getRandomWord()
     arrayString = 'NSArray *' + arrayName + ' = @[\n'
     for i in range(1,15):
-        element = '     @"' + getRandomStr(50,100) + '",\n'
+        element = '     @"' + getRandomWord() + '",\n'
         arrayString += element
     arrayString += '  ];\n    return ' + arrayName + ';\n}'
     return line + arrayString
@@ -38,19 +50,19 @@ def addNSArray():
 
 # 生成NSData类
 def addNSData():
-    line = '- (NSData *)' + getRandomStr(15,20) + ':(NSString *)' + getRandomStr(15,20) + ' {\n   '
-    dataName = getRandomStr(15,20)
-    string = 'NSData *' + dataName + ' = [@"' + getRandomStr(50,100) + '"' + ' dataUsingEncoding:NSUTF8StringEncoding]' + ';\n   return '+ dataName + ';\n}'
+    line = '- (NSData *)' + getRandomWord() + ':(NSString *)' + getRandomWord() + ' {\n   '
+    dataName = getRandomWord()
+    string = 'NSData *' + dataName + ' = [@"' + getRandomWord() + '"' + ' dataUsingEncoding:NSUTF8StringEncoding]' + ';\n   return '+ dataName + ';\n}'
     return line+string
 
 
 # 生成NSArray类
 def addNSDictionary():
-    line = '- (NSDictionary *)' + getRandomStr(15,20) + ':(NSArray *)' + getRandomStr(15,20) + ' {\n   '
-    dictName = getRandomStr(15,20)
+    line = '- (NSDictionary *)' + getRandomWord() + ':(NSArray *)' + getRandomWord() + ' {\n   '
+    dictName = getRandomWord()
     dictString = 'NSDictionary *' + dictName + ' = @{\n'
     for i in range(1,10):
-        element = '      @"' + getRandomStr(15,20) + '" : ' + '@"' + getRandomStr(50,100) + '",\n'
+        element = '      @"' + getRandomWord() + '" : ' + '@"' + getRandomWord() + '",\n'
         dictString += element
 
     dictString += '  };\n    return ' + dictName + ';\n}'
@@ -59,10 +71,10 @@ def addNSDictionary():
 
 # 生成UIImage类
 def addUIImage():
-    line = '- (UIImage *)' + getRandomStr(15, 20) + ':(UIImage *)' + getRandomStr(15, 20) + ' {\n   '
-    dataName = getRandomStr(15, 20)
-    imageName = getRandomStr(15, 20)
-    string = 'NSData *' + dataName + ' = [@"' + getRandomStr(50,100) + '"' + ' dataUsingEncoding:NSUTF8StringEncoding]' + ';\n   '
+    line = '- (UIImage *)' + getRandomWord() + ':(UIImage *)' + getRandomWord() + ' {\n   '
+    dataName = getRandomWord()
+    imageName = getRandomWord()
+    string = 'NSData *' + dataName + ' = [@"' + getRandomWord() + '"' + ' dataUsingEncoding:NSUTF8StringEncoding]' + ';\n   '
     string += 'UIImage *' + imageName + ' = [UIImage imageWithData:' + dataName + '];\n   '
     string += 'return '+ imageName + ';\n}'
 

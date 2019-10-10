@@ -25,7 +25,7 @@ def HFileAddCode(file_path,old_str,endTotalCount):
     Ropen=open(file_path,'r')
     flagCount = 0
     for line in Ropen:
-        nameStr = addRandomUI.getRandomStr(6, 10)
+        nameStr = addRandomUI.getRandomWord()
         className = random.choice(classArray)
 
         if old_str in line:
